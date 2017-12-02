@@ -42,6 +42,8 @@ double Navigation::get_velocity()
 double Navigation::get_position()
 {
   /// TASK 8 (PERSON B) ////////////////////////////////////////////////////////
-  
+  double v = this->get_velocity();
+  this->position += v*DT; //integrate
+  return this->position;
   /// END OF TASK 8B ///////////////////////////////////////////////////////////
 }
